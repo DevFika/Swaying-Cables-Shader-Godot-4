@@ -1,0 +1,45 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bsjdr3a2gbhfc"
+path="res://.godot/imported/cable.glb-79316ab3942ed6ed652f98c0354cb0f1.scn"
+
+[deps]
+
+source_file="res://assets/cable.glb"
+dest_files=["res://.godot/imported/cable.glb-79316ab3942ed6ed652f98c0354cb0f1.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=false
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"material_01": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/sm_cable_01.tres"
+},
+"material_02": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/sm_cable_02.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

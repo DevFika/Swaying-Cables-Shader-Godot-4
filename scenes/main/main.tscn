@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://r1dt618imrfg"]
+
+[ext_resource type="PackedScene" uid="uid://bsjdr3a2gbhfc" path="res://assets/cable.glb" id="1_vfq2u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66n54"]
+albedo_color = Color(0.360784, 0.411765, 0.439216, 1)
+roughness = 0.63
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cn4io"]
+sky_top_color = Color(0.360784, 0.552941, 0.721569, 1)
+sky_horizon_color = Color(0.27451, 0.396078, 0.54902, 1)
+sky_curve = 0.848528
+ground_bottom_color = Color(0.27451, 0.396078, 0.54902, 1)
+ground_horizon_color = Color(0.27451, 0.396078, 0.54902, 1)
+sun_angle_max = 0.0
+sun_curve = 0.106066
+
+[sub_resource type="Sky" id="Sky_uyx82"]
+sky_material = SubResource("ProceduralSkyMaterial_cn4io")
+
+[sub_resource type="Environment" id="Environment_8xqjg"]
+background_mode = 2
+sky = SubResource("Sky_uyx82")
+tonemap_mode = 3
+ssao_enabled = true
+ssao_intensity = 5.28
+ssao_light_affect = 0.29
+ssao_ao_channel_affect = 1.0
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02773, 0)
+material_override = SubResource("StandardMaterial3D_66n54")
+size = Vector3(3.98657, 0.142517, 0.210938)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.102534, 0)
+material_override = SubResource("StandardMaterial3D_66n54")
+operation = 2
+size = Vector3(3.98657, 0.142517, 0.092041)
+metadata/_edit_lock_ = true
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00424147, 0.125248)
+material_override = SubResource("StandardMaterial3D_66n54")
+operation = 2
+size = Vector3(3.98657, 0.0722656, 0.092041)
+metadata/_edit_lock_ = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.832128, -0.147273, 0.534671, -7.10592e-10, 0.964095, 0.265556, -0.554583, -0.220977, 0.802251, -5.91993, 0, 6.36462)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8xqjg")
+
+[node name="cable6" parent="." instance=ExtResource("1_vfq2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05268, 2, 0.00608957)
+
+[node name="cable10" parent="." instance=ExtResource("1_vfq2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.270117, 2, 0.00608957)
+
+[node name="cable11" parent="." instance=ExtResource("1_vfq2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.443846, 2, 0.00608957)
+
+[node name="cable12" parent="." instance=ExtResource("1_vfq2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16543, 2, 0.00608957)

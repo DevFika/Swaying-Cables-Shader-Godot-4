@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dyr185umtjddx"]
+
+[ext_resource type="Shader" path="res://materials/s_swaying_cable.gdshader" id="1_fe8x4"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fe8x4")
+shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/speed = 1.0
+shader_parameter/intensity = 0.35
